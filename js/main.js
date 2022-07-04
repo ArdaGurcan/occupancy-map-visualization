@@ -41,15 +41,10 @@ connection.onmessage = function (event) {
             for (let x = 0; x < data[frame]["info.width"]; x++) {
                 const material = new THREE.MeshBasicMaterial({
                     color: new THREE.Color(
-                        "hsl(" +
-                            (
-                                (100 -parseInt(
-                                    data[frame][
-                                        "data_" +
-                                            (data[frame]["info.width"] * y + x)
-                                    ]
-                                )) * 120/100 ) +
-                            ",100%,70%)"
+                        `hsl(${(100 - parseInt(
+                        data[frame]["data_" +
+                        (data[frame]["info.width"] * y + x)]
+                      )) * 120 / 100},100%,70%)`
                     ),
                 });
                 const cube = new THREE.Mesh(geometry, material);
