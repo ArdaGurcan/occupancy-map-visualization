@@ -49,7 +49,7 @@ connection.onmessage = function (event) {
                                             (data[frame]["info.width"] * y + x)
                                     ]
                                 )) * 120/100 ) +
-                            ",100%,65%)"
+                            ",100%,70%)"
                     ),
                 });
                 const cube = new THREE.Mesh(geometry, material);
